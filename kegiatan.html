@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kegiatan — Balai.semut (In Progress)</title>
+<meta name="description" content="Kumpulan kegiatan Balai.semut: SOTR, bagi takjil, liburan, nongkrong, olahraga, dan event kecil lainnya.">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============================== NAVBAR ============================== -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">BALAI<span>.</span>SEMUT</a>
+
+    <nav class="nav-menu" aria-label="Navigasi utama">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="about.html" class="nav-link">Tentang</a>
+      <a href="kegiatan.html" class="nav-link">Kegiatan</a>
+      <a href="galeri.html" class="nav-link">Galeri</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="galeri.html" class="btn btn-ghost btn-sm desktop-only">BALAI</a>
+      <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu-list" aria-label="Navigasi mobile">
+    <a href="index.html" class="mobile-menu-link">Beranda</a>
+    <a href="about.html" class="mobile-menu-link">Tentang</a>
+    <a href="kegiatan.html" class="mobile-menu-link">Kegiatan</a>
+    <a href="galeri.html" class="mobile-menu-link">Galeri</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <a href="galeri.html" class="btn btn-primary">BALAI</a>
+    <div class="mobile-menu-social">
+      <a href="https://instagram.com/balai.semut" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@balai.semut" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ============================== PAGE HERO ============================== -->
+  <section class="page-hero" style="min-height:46vh;">
+    <div class="page-hero-media">
+      <img src="assets/images/activity-liburan.svg" alt="Kegiatan Balai.semut" width="1600" height="900">
+    </div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title font-display">Our Activities</h1>
+      <p class="page-hero-sub">Dari SOTR, bagi takjil, liburan, nongkrong, sampai event kecil — semua kegiatan kami ada di sini.</p>
+    </div>
+  </section>
+
+  <!-- ============================== FILTER + GRID ============================== -->
+  <section aria-labelledby="kegiatan-list-title">
+    <div class="container">
+      <h2 id="kegiatan-list-title" class="visually-hidden">Daftar Kegiatan</h2>
+
+      <!-- FILTER BAR: tambah kategori baru dengan menambah tombol di sini -->
+      <div class="filter-bar" data-kegiatan-filters role="group" aria-label="Filter kategori kegiatan">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sotr">SOTR</button>
+        <button class="filter-btn" data-filter="takjil">Takjil</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="hangout">Hangout</button>
+        <button class="filter-btn" data-filter="sport">Sport</button>
+        <button class="filter-btn" data-filter="event">Event</button>
+        <button class="filter-btn" data-filter="others">Others</button>
+      </div>
+
+      <!--
+        ============================================================
+        CARA MENAMBAH KEGIATAN BARU:
+        1. Copy satu blok <article class="kegiatan-card" ...> di bawah ini.
+        2. Ganti data-category sesuai kategori (sotr/takjil/travel/hangout/sport/event/others).
+        3. Ganti gambar, judul, tanggal, lokasi, dan deskripsi.
+        4. Atribut data-story-* dipakai untuk menampilkan modal "Lihat Selengkapnya".
+           data-story-desc bisa berisi beberapa paragraf, pisahkan dengan tanda "||".
+           data-story-gallery diisi daftar path gambar dipisah koma.
+        ============================================================
+      -->
+
+      <div class="kegiatan-grid" data-reveal-stagger>
+
+        <!-- KEGIATAN 1: SOTR -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="sotr">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/activity-sotr.svg" alt="SOTR 2026 Balai.semut" loading="lazy" width="800" height="600">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>SOTR</span>
+              <span>15 Maret 2026</span>
+            </div>
+            <h3 class="kegiatan-title">SOTR 2026</h3>
+            <p class="kegiatan-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/activity-sotr.svg"
+              data-story-title="SOTR 2026"
+              data-story-date="15 Maret 2026"
+              data-story-location="Graha Laksana Tidar, Malang"
+              data-story-category="Social Activity — SOTR"
+              data-story-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.||Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              data-story-gallery="assets/images/story-extra-1.svg,assets/images/story-extra-2.svg,assets/images/story-extra-3.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+        <!-- KEGIATAN 2: BAGI TAKJIL -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="takjil">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/activity-takjil.svg" alt="Bagi Takjil Balai.semut" loading="lazy" width="800" height="600">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>Takjil</span>
+              <span>20 Maret 2026</span>
+            </div>
+            <h3 class="kegiatan-title">Bagi Takjil</h3>
+            <p class="kegiatan-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/activity-takjil.svg"
+              data-story-title="Bagi Takjil"
+              data-story-date="20 Maret 2026"
+              data-story-location="Sekitar Perumahan, Malang"
+              data-story-category="Social Activity — Takjil"
+              data-story-desc="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.||Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              data-story-gallery="assets/images/story-extra-4.svg,assets/images/story-extra-5.svg,assets/images/story-extra-6.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+        <!-- KEGIATAN 3: LIBURAN -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="travel">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/activity-liburan.svg" alt="Liburan Bersama Balai.semut" loading="lazy" width="800" height="600">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>Travel</span>
+              <span>2 Februari 2026</span>
+            </div>
+            <h3 class="kegiatan-title">Liburan Bersama</h3>
+            <p class="kegiatan-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/activity-liburan.svg"
+              data-story-title="Liburan Bersama"
+              data-story-date="2 Februari 2026"
+              data-story-location="Coban Rondo, Malang"
+              data-story-category="Travel"
+              data-story-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.||Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+              data-story-gallery="assets/images/gallery-05.svg,assets/images/gallery-06.svg,assets/images/gallery-07.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+        <!-- KEGIATAN 4: NONGKRONG -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="hangout">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/activity-nongkrong.svg" alt="Malam Nongkrong Balai.semut" loading="lazy" width="800" height="600">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>Hangout</span>
+              <span>28 Januari 2026</span>
+            </div>
+            <h3 class="kegiatan-title">Malam Nongkrong</h3>
+            <p class="kegiatan-desc">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/activity-nongkrong.svg"
+              data-story-title="Malam Nongkrong"
+              data-story-date="28 Januari 2026"
+              data-story-location="Angkringan Dummy, Malang"
+              data-story-category="Hangout"
+              data-story-desc="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.||Et harum quidem rerum facilis est et expedita distinctio."
+              data-story-gallery="assets/images/gallery-08.svg,assets/images/gallery-09.svg,assets/images/gallery-10.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+        <!-- KEGIATAN 5: OLAHRAGA -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="sport">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/activity-olahraga.svg" alt="Olahraga Bersama Balai.semut" loading="lazy" width="800" height="600">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>Sport</span>
+              <span>18 Januari 2026</span>
+            </div>
+            <h3 class="kegiatan-title">Mabar Futsal</h3>
+            <p class="kegiatan-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/activity-olahraga.svg"
+              data-story-title="Mabar Futsal"
+              data-story-date="18 Januari 2026"
+              data-story-location="Lapangan Futsal Dummy, Malang"
+              data-story-category="Sport"
+              data-story-desc="Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.||Ut et voluptates repudiandae sint et molestiae non recusandae."
+              data-story-gallery="assets/images/gallery-11.svg,assets/images/gallery-12.svg,assets/images/gallery-13.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+        <!-- KEGIATAN 6: EVENT -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="event">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/gallery-14.svg" alt="Event Kecil Balai.semut" loading="lazy" width="800" height="1000">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>Event</span>
+              <span>5 Januari 2026</span>
+            </div>
+            <h3 class="kegiatan-title">Anniversary Kecil-Kecilan</h3>
+            <p class="kegiatan-desc">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/gallery-14.svg"
+              data-story-title="Anniversary Kecil-Kecilan"
+              data-story-date="5 Januari 2026"
+              data-story-location="Basecamp Balai.semut, Malang"
+              data-story-category="Event"
+              data-story-desc="Maiores alias consequatur aut perferendis doloribus asperiores repellat, sit amet consectetur adipiscing elit.||Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              data-story-gallery="assets/images/gallery-15.svg,assets/images/gallery-16.svg,assets/images/gallery-17.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+        <!-- KEGIATAN 7: OTHERS -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="others">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/gallery-18.svg" alt="Kegiatan lainnya Balai.semut" loading="lazy" width="800" height="800">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>Others</span>
+              <span>22 Desember 2025</span>
+            </div>
+            <h3 class="kegiatan-title">Bakar-Bakar Akhir Tahun</h3>
+            <p class="kegiatan-desc">Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/gallery-18.svg"
+              data-story-title="Bakar-Bakar Akhir Tahun"
+              data-story-date="22 Desember 2025"
+              data-story-location="Rooftop Dummy, Malang"
+              data-story-category="Others"
+              data-story-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.||Ut labore et dolore magna aliqua ut enim ad minim veniam."
+              data-story-gallery="assets/images/gallery-19.svg,assets/images/gallery-20.svg,assets/images/gallery-21.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+        <!-- KEGIATAN 8: TRAVEL TAMBAHAN -->
+        <article class="kegiatan-card" data-kegiatan-card data-category="travel">
+          <div class="kegiatan-thumb">
+            <img src="assets/images/gallery-22.svg" alt="Road trip Balai.semut" loading="lazy" width="800" height="700">
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span>Travel</span>
+              <span>10 Desember 2025</span>
+            </div>
+            <h3 class="kegiatan-title">Road Trip Dadakan</h3>
+            <p class="kegiatan-desc">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            <button type="button" class="activity-more"
+              data-story-trigger
+              data-story-hero="assets/images/gallery-22.svg"
+              data-story-title="Road Trip Dadakan"
+              data-story-date="10 Desember 2025"
+              data-story-location="Batu, Malang"
+              data-story-category="Travel"
+              data-story-desc="Magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip.||Ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate."
+              data-story-gallery="assets/images/gallery-23.svg,assets/images/gallery-24.svg,assets/images/moment-3.svg">
+              Lihat Selengkapnya
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="no-results" data-kegiatan-empty>Belum ada kegiatan untuk kategori ini. Coba pilih kategori lain.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== STORY MODAL ============================== -->
+<div class="story-modal" data-story-modal aria-hidden="true">
+  <div class="story-modal-panel" role="dialog" aria-modal="true" aria-labelledby="storyModalTitle">
+    <button class="story-modal-close" data-story-close aria-label="Tutup detail kegiatan">✕</button>
+    <div class="story-modal-hero">
+      <img data-story-hero src="" alt="">
+    </div>
+    <div class="story-modal-body">
+      <div class="story-modal-meta">
+        <span data-story-category></span>
+        <span data-story-date></span>
+        <span data-story-location></span>
+      </div>
+      <h3 class="story-modal-title" id="storyModalTitle" data-story-title></h3>
+      <div class="story-modal-desc" data-story-desc></div>
+      <div class="story-modal-gallery" data-story-gallery></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">BALAI<span style="color:var(--color-accent)">.</span>SEMUT</div>
+        <p class="footer-tagline">Not just a circle. It's a collection of memories.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Navigasi</div>
+        <div class="footer-list">
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="galeri.html">Galeri</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Kontak</div>
+        <div class="footer-list">
+          <span>📍 Graha Laksana Tidar, Malang</span>
+          <span>📱 08xxxxxxxxxx</span>
+          <a href="https://instagram.com/balai.semut" target="_blank" rel="noopener">◎ @balai.semut</a>
+          <a href="https://tiktok.com/@balai.semut" target="_blank" rel="noopener">♪ @balai.semut</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Balai.semut</span>
+      <span>Made with memories.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+<!-- ============================== WEBSITE IN PROGRESS BADGE ==============================
+     Badge ini menandakan website masih dalam tahap pengembangan/pengisian konten.
+     HAPUS seluruh blok <div class="wip-badge" ...>...</div> ini kapan pun website sudah
+     siap/final dan ingin badge ini hilang.
+============================================================================== -->
+<div class="wip-badge" data-wip-badge>
+  <span class="wip-dot" aria-hidden="true"></span>
+  <span class="wip-text">Website in Progress — Coming Soon</span>
+  <button type="button" class="wip-close" data-wip-close aria-label="Tutup notifikasi">✕</button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

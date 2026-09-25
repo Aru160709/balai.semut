@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri — Balai.semut (In Progress)</title>
+<meta name="description" content="Kumpulan kenangan dan momen Balai.semut dalam galeri foto.">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============================== NAVBAR ============================== -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">BALAI<span>.</span>SEMUT</a>
+
+    <nav class="nav-menu" aria-label="Navigasi utama">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="about.html" class="nav-link">Tentang</a>
+      <a href="kegiatan.html" class="nav-link">Kegiatan</a>
+      <a href="galeri.html" class="nav-link">Galeri</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="galeri.html" class="btn btn-ghost btn-sm desktop-only">BALAI</a>
+      <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu-list" aria-label="Navigasi mobile">
+    <a href="index.html" class="mobile-menu-link">Beranda</a>
+    <a href="about.html" class="mobile-menu-link">Tentang</a>
+    <a href="kegiatan.html" class="mobile-menu-link">Kegiatan</a>
+    <a href="galeri.html" class="mobile-menu-link">Galeri</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <a href="galeri.html" class="btn btn-primary">BALAI</a>
+    <div class="mobile-menu-social">
+      <a href="https://instagram.com/balai.semut" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@balai.semut" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ============================== PAGE HERO ============================== -->
+  <section class="page-hero" style="min-height:46vh;">
+    <div class="page-hero-media">
+      <img src="assets/images/gallery-preview-1.svg" alt="Kenangan Balai.semut" width="1600" height="900">
+    </div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title font-display">Memories</h1>
+      <p class="page-hero-sub">Kumpulan momen yang sudah kami lewati bersama. Klik salah satu foto untuk melihat lebih detail.</p>
+    </div>
+  </section>
+
+  <!-- ============================== FILTER + MASONRY GALLERY ============================== -->
+  <section aria-labelledby="galeri-list-title">
+    <div class="container">
+      <h2 id="galeri-list-title" class="visually-hidden">Daftar Galeri</h2>
+
+      <!--
+        CARA MENAMBAH FOTO GALERI BARU:
+        1. Taruh file foto baru di /assets/images/
+        2. Copy satu blok <button class="gallery-tile" ...> di bawah.
+        3. Ganti src gambar, data-tags (tahun + kategori, contoh: "2026 travel"),
+           data-category, data-title, data-date, dan data-desc.
+      -->
+      <div class="filter-bar" data-galeri-filters role="group" aria-label="Filter galeri">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="2026">2026</button>
+        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn" data-filter="sotr">SOTR</button>
+        <button class="filter-btn" data-filter="takjil">Takjil</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="hangout">Hangout</button>
+        <button class="filter-btn" data-filter="event">Event</button>
+      </div>
+
+      <div class="gallery-masonry" data-reveal>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 sotr"
+          data-category="Sotr" data-title="SOTR Bareng Warga" data-date="9 April 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat SOTR Bareng Warga">
+          <img src="assets/images/gallery-01.svg" alt="SOTR Bareng Warga - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>SOTR Bareng Warga</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 takjil"
+          data-category="Takjil" data-title="Berbagi Takjil" data-date="4 November 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Berbagi Takjil">
+          <img src="assets/images/gallery-02.svg" alt="Berbagi Takjil - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Berbagi Takjil</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 event"
+          data-category="Event" data-title="Gathering Circle" data-date="14 Januari 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Gathering Circle">
+          <img src="assets/images/gallery-03.svg" alt="Gathering Circle - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Gathering Circle</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 sotr"
+          data-category="Sotr" data-title="SOTR Keliling Kompleks" data-date="8 September 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat SOTR Keliling Kompleks">
+          <img src="assets/images/gallery-04.svg" alt="SOTR Keliling Kompleks - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>SOTR Keliling Kompleks</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 event"
+          data-category="Event" data-title="Gathering Circle" data-date="7 Desember 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Gathering Circle">
+          <img src="assets/images/gallery-05.svg" alt="Gathering Circle - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Gathering Circle</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 event"
+          data-category="Event" data-title="Event Kecil-Kecilan" data-date="15 Oktober 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Event Kecil-Kecilan">
+          <img src="assets/images/gallery-06.svg" alt="Event Kecil-Kecilan - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Event Kecil-Kecilan</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 travel"
+          data-category="Travel" data-title="Trip Singkat" data-date="23 Juli 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Trip Singkat">
+          <img src="assets/images/gallery-07.svg" alt="Trip Singkat - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Trip Singkat</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 travel"
+          data-category="Travel" data-title="Trip Singkat" data-date="7 Juni 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Trip Singkat">
+          <img src="assets/images/gallery-08.svg" alt="Trip Singkat - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Trip Singkat</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 sotr"
+          data-category="Sotr" data-title="SOTR Malam Ramadan" data-date="4 Juni 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat SOTR Malam Ramadan">
+          <img src="assets/images/gallery-09.svg" alt="SOTR Malam Ramadan - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>SOTR Malam Ramadan</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 travel"
+          data-category="Travel" data-title="Liburan ke Pantai" data-date="24 Agustus 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Liburan ke Pantai">
+          <img src="assets/images/gallery-10.svg" alt="Liburan ke Pantai - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Liburan ke Pantai</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 event"
+          data-category="Event" data-title="Perayaan Sederhana" data-date="3 September 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Perayaan Sederhana">
+          <img src="assets/images/gallery-11.svg" alt="Perayaan Sederhana - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Perayaan Sederhana</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 travel"
+          data-category="Travel" data-title="Trip Singkat" data-date="23 Februari 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Trip Singkat">
+          <img src="assets/images/gallery-12.svg" alt="Trip Singkat - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Trip Singkat</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 sotr"
+          data-category="Sotr" data-title="SOTR Malam Ramadan" data-date="3 April 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat SOTR Malam Ramadan">
+          <img src="assets/images/gallery-13.svg" alt="SOTR Malam Ramadan - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>SOTR Malam Ramadan</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 sotr"
+          data-category="Sotr" data-title="SOTR Malam Ramadan" data-date="15 November 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat SOTR Malam Ramadan">
+          <img src="assets/images/gallery-14.svg" alt="SOTR Malam Ramadan - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>SOTR Malam Ramadan</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 travel"
+          data-category="Travel" data-title="Jalan-Jalan Weekend" data-date="12 April 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Jalan-Jalan Weekend">
+          <img src="assets/images/gallery-15.svg" alt="Jalan-Jalan Weekend - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Jalan-Jalan Weekend</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 travel"
+          data-category="Travel" data-title="Trip Singkat" data-date="18 Desember 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Trip Singkat">
+          <img src="assets/images/gallery-16.svg" alt="Trip Singkat - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Trip Singkat</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 takjil"
+          data-category="Takjil" data-title="Takjil On The Road" data-date="13 Mei 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Takjil On The Road">
+          <img src="assets/images/gallery-17.svg" alt="Takjil On The Road - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Takjil On The Road</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 event"
+          data-category="Event" data-title="Gathering Circle" data-date="11 Januari 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Gathering Circle">
+          <img src="assets/images/gallery-18.svg" alt="Gathering Circle - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Gathering Circle</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 takjil"
+          data-category="Takjil" data-title="Takjil On The Road" data-date="13 Mei 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Takjil On The Road">
+          <img src="assets/images/gallery-19.svg" alt="Takjil On The Road - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Takjil On The Road</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2026 sotr"
+          data-category="Sotr" data-title="SOTR Bareng Warga" data-date="23 Juni 2026"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat SOTR Bareng Warga">
+          <img src="assets/images/gallery-20.svg" alt="SOTR Bareng Warga - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>SOTR Bareng Warga</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 takjil"
+          data-category="Takjil" data-title="Takjil On The Road" data-date="21 Agustus 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Takjil On The Road">
+          <img src="assets/images/gallery-21.svg" alt="Takjil On The Road - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Takjil On The Road</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 takjil"
+          data-category="Takjil" data-title="Bagi Takjil Sore" data-date="8 Desember 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Bagi Takjil Sore">
+          <img src="assets/images/gallery-22.svg" alt="Bagi Takjil Sore - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Bagi Takjil Sore</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 event"
+          data-category="Event" data-title="Gathering Circle" data-date="19 Juli 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Gathering Circle">
+          <img src="assets/images/gallery-23.svg" alt="Gathering Circle - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Gathering Circle</span></span>
+        </button>
+        <button type="button" class="gallery-tile" data-galeri-tile data-tags="2025 event"
+          data-category="Event" data-title="Perayaan Sederhana" data-date="8 Maret 2025"
+          data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." aria-label="Lihat Perayaan Sederhana">
+          <img src="assets/images/gallery-24.svg" alt="Perayaan Sederhana - Balai.semut" loading="lazy">
+          <span class="gallery-tile-overlay"><span>Perayaan Sederhana</span></span>
+        </button>
+      </div>
+
+      <p class="no-results" data-galeri-empty>Belum ada foto untuk filter ini. Coba filter lain.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== LIGHTBOX ============================== -->
+<div class="lightbox" data-lightbox aria-hidden="true">
+  <div class="lightbox-inner" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <button class="lightbox-close" data-lightbox-close aria-label="Tutup lightbox">✕</button>
+    <button class="lightbox-nav lightbox-prev" data-lightbox-prev aria-label="Foto sebelumnya">‹</button>
+    <button class="lightbox-nav lightbox-next" data-lightbox-next aria-label="Foto berikutnya">›</button>
+
+    <div class="lightbox-media">
+      <img data-lightbox-img src="" alt="">
+    </div>
+    <div class="lightbox-info">
+      <span class="lightbox-category" data-lightbox-category></span>
+      <h3 class="lightbox-title" id="lightboxTitle" data-lightbox-title></h3>
+      <span class="lightbox-date" data-lightbox-date></span>
+      <p class="lightbox-desc" data-lightbox-desc></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">BALAI<span style="color:var(--color-accent)">.</span>SEMUT</div>
+        <p class="footer-tagline">Not just a circle. It's a collection of memories.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Navigasi</div>
+        <div class="footer-list">
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="galeri.html">Galeri</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Kontak</div>
+        <div class="footer-list">
+          <span>📍 Graha Laksana Tidar, Malang</span>
+          <span>📱 08xxxxxxxxxx</span>
+          <a href="https://instagram.com/balai.semut" target="_blank" rel="noopener">◎ @balai.semut</a>
+          <a href="https://tiktok.com/@balai.semut" target="_blank" rel="noopener">♪ @balai.semut</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Balai.semut</span>
+      <span>Made with memories.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+<!-- ============================== WEBSITE IN PROGRESS BADGE ==============================
+     Badge ini menandakan website masih dalam tahap pengembangan/pengisian konten.
+     HAPUS seluruh blok <div class="wip-badge" ...>...</div> ini kapan pun website sudah
+     siap/final dan ingin badge ini hilang.
+============================================================================== -->
+<div class="wip-badge" data-wip-badge>
+  <span class="wip-dot" aria-hidden="true"></span>
+  <span class="wip-text">Website in Progress — Coming Soon</span>
+  <button type="button" class="wip-close" data-wip-close aria-label="Tutup notifikasi">✕</button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

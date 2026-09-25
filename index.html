@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balai.semut — Not Just a Circle. It's a Collection of Memories. (In Progress)</title>
+<meta name="description" content="Balai.semut adalah circle pertemanan tempat berkumpul, membuat kenangan, dan melakukan kegiatan positif bersama.">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<!-- Google Fonts: Fraunces (display) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============================== NAVBAR ============================== -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">BALAI<span>.</span>SEMUT</a>
+
+    <nav class="nav-menu" aria-label="Navigasi utama">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="index.html" class="nav-link">Tentang</a>
+      <a href="index.html" class="nav-link">Kegiatan</a>
+      <a href="index.html" class="nav-link">Galeri</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="galeri.html" class="btn btn-ghost btn-sm desktop-only">BALAI</a>
+      <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu-list" aria-label="Navigasi mobile">
+    <a href="index.html" class="mobile-menu-link">Beranda</a>
+    <a href="index.html" class="mobile-menu-link">Tentang</a>
+    <a href="index.html" class="mobile-menu-link">Kegiatan</a>
+    <a href="index.html" class="mobile-menu-link">Galeri</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <!-- <a href="galeri.html" class="btn btn-primary">BALAI</a> -->
+    <div class="mobile-menu-social">
+      <!-- GANTI USERNAME INSTAGRAM & TIKTOK DI SINI (dummy) -->
+      <a href="https://instagram.com/balai.semut" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@balai.semut" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero">
+    <!-- HERO BACKGROUND -->
+    <!-- Untuk ganti dengan video, hapus <img> di bawah dan gunakan:
+    <video autoplay muted loop playsinline poster="assets/images/hero-bg.svg">
+      <source src="assets/videos/hero-loop.mp4" type="video/mp4">
+    </video>
+    -->
+    <div class="hero-media">
+      <img src="assets/images/about-hero.jpeg" alt="Momen kebersamaan Balai.semut" width="1920" height="1080">
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Sebuah circle pertemanan</p>
+      <h1 class="hero-title">BALAI<span class="dot">.</span>SEMUT</h1>
+      <p class="hero-tagline">Not just a circle.<br>It's a collection of memories.</p>
+
+      <div class="hero-actions">
+        <a href="index.html" class="btn btn-primary">Explore Memories</a>
+        <a href="index.html" class="btn btn-ghost">Our Stories</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ============================== INTRODUCTION ============================== -->
+  <!-- <section aria-labelledby="intro-title">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-media" data-reveal>
+          <img src="assets/images/intro-photo.svg" alt="Kebersamaan anggota Balai.semut" loading="lazy" width="800" height="1000">
+        </div>
+
+        <div class="intro-text" data-reveal>
+          <span class="eyebrow">A Little About Us</span>
+          <h2 id="intro-title" class="section-title">Tumbuh dari kebersamaan, bukan struktur.</h2>
+
+           ======ganti teks dummy di bawah ini======
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Balai.semut lahir dari kumpulan orang-orang yang gemar menghabiskan waktu bersama, tanpa embel-embel organisasi formal.</p>
+          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Memories</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Activities</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2026</div>
+              <div class="stat-label">Since</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============================== FEATURED MOMENTS ============================== -->
+  <!-- <section class="section-alt" aria-labelledby="moments-title">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Featured Moments</span>
+        <h2 id="moments-title" class="section-title">Beberapa momen favorit kami</h2>
+      </div>
+
+      <div class="moments-grid" data-reveal-stagger>
+        <a href="kegiatan.html" class="moment-item size-lg">
+          <img src="assets/images/moment-1.svg" alt="Momen liburan bersama Balai.semut" loading="lazy" width="1200" height="1500">
+          <div class="moment-overlay">
+            <span class="moment-date">15 Maret 2026</span>
+            <h3 class="moment-name">Liburan Bersama</h3>
+            <span class="moment-link">View Story</span>
+          </div>
+        </a>
+
+        <a href="kegiatan.html" class="moment-item size-md">
+          <img src="assets/images/moment-2.svg" alt="SOTR bersama Balai.semut" loading="lazy" width="800" height="600">
+          <div class="moment-overlay">
+            <span class="moment-date">10 Maret 2026</span>
+            <h3 class="moment-name">SOTR 2026</h3>
+            <span class="moment-link">View Story</span>
+          </div>
+        </a>
+
+        <a href="kegiatan.html" class="moment-item size-md">
+          <img src="assets/images/moment-4.svg" alt="Nongkrong santai Balai.semut" loading="lazy" width="800" height="600">
+          <div class="moment-overlay">
+            <span class="moment-date">2 Maret 2026</span>
+            <h3 class="moment-name">Malam Nongkrong</h3>
+            <span class="moment-link">View Story</span>
+          </div>
+        </a>
+
+        <a href="kegiatan.html" class="moment-item size-wide">
+          <img src="assets/images/moment-5.svg" alt="Bagi takjil bersama Balai.semut" loading="lazy" width="800" height="800">
+          <div class="moment-overlay">
+            <span class="moment-date">20 Maret 2026</span>
+            <h3 class="moment-name">Bagi Takjil</h3>
+            <span class="moment-link">View Story</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============================== LATEST ACTIVITIES ============================== -->
+  <!-- <section aria-labelledby="activities-title">
+    <div class="container">
+      <div class="section-header-row" data-reveal>
+        <div class="section-header" style="margin-bottom:0;">
+          <span class="eyebrow">Latest Activities</span>
+          <h2 id="activities-title" class="section-title">Kegiatan terbaru</h2>
+        </div>
+        <a href="kegiatan.html" class="btn btn-ghost btn-sm">Lihat Semua Kegiatan</a>
+      </div>
+
+      <div class="activities-grid" data-reveal-stagger>
+        <article class="activity-card">
+          <div class="activity-thumb">
+            <img src="assets/images/activity-sotr.svg" alt="Kegiatan SOTR Balai.semut" loading="lazy" width="800" height="600">
+            <span class="activity-badge">Social</span>
+          </div>
+          <div class="activity-body">
+            <span class="activity-date">15 Maret 2026</span>
+            <h3 class="activity-title">SOTR 2026</h3>
+            <p class="activity-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <a href="kegiatan.html" class="activity-more">Lihat Selengkapnya</a>
+          </div>
+        </article>
+
+        <article class="activity-card">
+          <div class="activity-thumb">
+            <img src="assets/images/activity-takjil.svg" alt="Kegiatan bagi takjil Balai.semut" loading="lazy" width="800" height="600">
+            <span class="activity-badge">Social</span>
+          </div>
+          <div class="activity-body">
+            <span class="activity-date">20 Maret 2026</span>
+            <h3 class="activity-title">Bagi Takjil</h3>
+            <p class="activity-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            <a href="kegiatan.html" class="activity-more">Lihat Selengkapnya</a>
+          </div>
+        </article>
+
+        <article class="activity-card">
+          <div class="activity-thumb">
+            <img src="assets/images/activity-liburan.svg" alt="Liburan bersama Balai.semut" loading="lazy" width="800" height="600">
+            <span class="activity-badge">Travel</span>
+          </div>
+          <div class="activity-body">
+            <span class="activity-date">2 Februari 2026</span>
+            <h3 class="activity-title">Liburan Bersama</h3>
+            <p class="activity-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            <a href="kegiatan.html" class="activity-more">Lihat Selengkapnya</a>
+          </div>
+        </article>
+
+        <article class="activity-card">
+          <div class="activity-thumb">
+            <img src="assets/images/activity-nongkrong.svg" alt="Nongkrong santai Balai.semut" loading="lazy" width="800" height="600">
+            <span class="activity-badge">Hangout</span>
+          </div>
+          <div class="activity-body">
+            <span class="activity-date">28 Januari 2026</span>
+            <h3 class="activity-title">Malam Nongkrong</h3>
+            <p class="activity-desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            <a href="kegiatan.html" class="activity-more">Lihat Selengkapnya</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============================== BIG QUOTE ============================== -->
+  <!-- <section class="quote-section section-alt">
+    <div class="container">
+      <p class="quote-text font-display" data-reveal>"Some moments are too good to be forgotten."</p>
+    </div>
+  </section> -->
+
+  <!-- ============================== GALLERY PREVIEW ============================== -->
+  <!-- <section aria-labelledby="gallery-preview-title">
+    <div class="container">
+      <div class="section-header text-center" data-reveal>
+        <span class="eyebrow">Gallery Preview</span>
+        <h2 id="gallery-preview-title" class="section-title">Sebagian kecil dari kenangan kami</h2>
+      </div>
+
+      <div class="gallery-preview-grid" data-reveal-stagger>
+        <div class="gp-item tall">
+          <img src="assets/images/gallery-preview-1.svg" alt="Kenangan Balai.semut 1" loading="lazy" width="800" height="1000">
+        </div>
+        <div class="gp-item">
+          <img src="assets/images/gallery-preview-2.svg" alt="Kenangan Balai.semut 2" loading="lazy" width="800" height="600">
+        </div>
+        <div class="gp-item">
+          <img src="assets/images/gallery-preview-3.svg" alt="Kenangan Balai.semut 3" loading="lazy" width="800" height="800">
+        </div>
+        <div class="gp-item tall">
+          <img src="assets/images/gallery-preview-4.svg" alt="Kenangan Balai.semut 4" loading="lazy" width="800" height="600">
+        </div>
+      </div>
+
+      <div class="gallery-preview-cta">
+        <a href="galeri.html" class="btn btn-primary">View All Memories</a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============================== FINAL CTA ============================== -->
+  <!-- <section class="final-cta">
+    <div class="final-cta-media">
+      <img src="assets/images/cta-bg.svg" alt="Kenangan Balai.semut" loading="lazy" width="1920" height="1080">
+    </div>
+    <div class="final-cta-content" data-reveal>
+      <h2 class="final-cta-title font-display">More stories are waiting.</h2>
+      <a href="galeri.html" class="btn btn-accent">Explore The Gallery</a>
+    </div>
+  </section> -->
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">BALAI<span style="color:var(--color-accent)">.</span>SEMUT</div>
+        <p class="footer-tagline">Not just a circle. It's a collection of memories.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Navigasi</div>
+        <div class="footer-list">
+          <a href="index.html">Beranda</a>
+          <a href="index.html">Tentang</a>
+          <a href="index.html">Kegiatan</a>
+          <a href="index.html">Galeri</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Kontak</div>
+        <div class="footer-list">
+          <!-- GANTI LOKASI DI SINI (data dummy) -->
+          <span>📍 2HXM+2C3, Karang Tengah, Karangwidoro, Kec. Dau, Kabupaten Malang, Jawa Timur 65151</span>
+          <!-- GANTI NOMOR TELEPON DI SINI (data dummy) -->
+          <span>📱 +62 895366702004</span>
+          <!-- GANTI USERNAME INSTAGRAM DI SINI (data dummy) -->
+          <a href="https://instagram.com/balai.semut" target="_blank" rel="noopener">◎ @balai.semut</a>
+          <!-- GANTI USERNAME TIKTOK DI SINI (data dummy) -->
+          <a href="https://tiktok.com/@balai.semut" target="_blank" rel="noopener">♪ @balai.semut</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Balai.semut</span>
+      <span>Made with memories.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+<!-- ============================== WEBSITE IN PROGRESS BADGE ==============================
+     Badge ini menandakan website masih dalam tahap pengembangan/pengisian konten.
+     HAPUS seluruh blok <div class="wip-badge" ...>...</div> ini kapan pun website sudah
+     siap/final dan ingin badge ini hilang.
+============================================================================== -->
+<div class="wip-badge" data-wip-badge>
+  <span class="wip-dot" aria-hidden="true"></span>
+  <span class="wip-text">Website in Progress — Coming Soon</span>
+  <button type="button" class="wip-close" data-wip-close aria-label="Tutup notifikasi">✕</button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
