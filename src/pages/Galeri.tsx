@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type CSSProperties } from 'react';
 import Reveal from '../components/Reveal';
 import PageHero from '../components/PageHero';
 import FilterBar from '../components/FilterBar';
@@ -51,6 +51,7 @@ export default function Galeri() {
                 key={photo.id}
                 type="button"
                 className="gallery-tile"
+                style={{ '--i': Math.min(index, 12) } as CSSProperties}
                 aria-label={`Lihat ${photo.title}`}
                 onClick={() => setLightboxIndex(index)}
               >

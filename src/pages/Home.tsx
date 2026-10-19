@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Reveal from '../components/Reveal';
 import FinalCta from '../components/FinalCta';
+import CountUp from '../components/CountUp';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { galleryPreview, introParagraphs, latestActivities, moments, stats } from '../data/home';
 
@@ -66,7 +67,9 @@ export default function Home() {
               <div className="stats-row">
                 {stats.map((stat) => (
                   <div className="stat-item" key={stat.label}>
-                    <div className="stat-number">{stat.number}</div>
+                    <div className="stat-number">
+                      <CountUp value={stat.number} />
+                    </div>
                     <div className="stat-label">{stat.label}</div>
                   </div>
                 ))}
