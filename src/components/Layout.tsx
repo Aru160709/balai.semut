@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollProgress from './ScrollProgress';
 import BackToTop from './BackToTop';
-import WipBadge from './WipBadge';
 
 /** Kerangka yang dipakai semua halaman: navbar, isi halaman, footer, dan elemen melayang. */
 export default function Layout() {
@@ -40,7 +39,6 @@ export default function Layout() {
 
       <Footer />
       <BackToTop />
-      <WipBadge />
     </>
   );
 }
