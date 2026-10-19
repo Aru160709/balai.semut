@@ -13,17 +13,21 @@ function shouldShow(): boolean {
   try {
     return sessionStorage.getItem(SEEN_KEY) !== '1';
   } catch {
-    return true; // sessionStorage tidak tersedia, tampilkan saja
+    return true;
   }
 }
 
 const letterStyle = (i: number) => ({ '--i': i }) as CSSProperties;
 
-/**
- * Layar pembuka: logo muncul huruf demi huruf, semut berjalan di atas garis loading,
- * lalu layar naik ke atas dan membuka website.
- * Selama splash tampil, animasi hero ditahan (lihat html[data-hold="on"] di CSS).
- */
+// Perbaikan teks terpotong: kotak dibuat selebar layar, logo di-center dengan flex
+const innerStyle: CSSProperties = { width: '100%', maxWidth: 'none' };
+const logoStyle: CSSProperties = {
+  display: 'flex',
+  justifyContent: 'center',
+  fontSize: 'clamp(2rem, 8vw, 4.4rem)',
+  padding: '0 0.1em 0.12em',
+};
+
 export default function Splash() {
   const [phase, setPhase] = useState<Phase>(() => (shouldShow() ? 'show' : 'gone'));
 
@@ -51,7 +55,6 @@ export default function Splash() {
       window.clearTimeout(leave);
       window.clearTimeout(done);
     };
-    // sengaja hanya dijalankan sekali saat pertama tampil
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -59,8 +62,8 @@ export default function Splash() {
 
   return (
     <div className={`splash${phase === 'leaving' ? ' is-leaving' : ''}`} aria-hidden="true">
-      <div className="splash-inner">
-        <div className="splash-logo font-display">
+      <div className="splash-inner" style={innerStyle}>
+        <div className="splash-logo font-display" style={logoStyle}>
           {[...'BALAI'].map((c, i) => (
             <span key={`a${i}`} className="splash-letter" style={letterStyle(i)}>
               {c}
